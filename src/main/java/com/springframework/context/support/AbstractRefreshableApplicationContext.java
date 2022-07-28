@@ -5,6 +5,7 @@ import com.springframework.beans.factory.ConfigurableListableBeanFactory;
 import com.springframework.beans.factory.support.DefaultListableBeanFactory;
 /**
  * 获取Bean工厂和加载资源
+ * @author wuxx
  * */
 public abstract class AbstractRefreshableApplicationContext extends AbstractApplicationContext{
 
@@ -24,6 +25,10 @@ public abstract class AbstractRefreshableApplicationContext extends AbstractAppl
         return new DefaultListableBeanFactory();
     }
 
+    /**
+     * 加载bean缓存
+     * @param beanFactory
+     */
     protected abstract void loadBeanDefinitions(DefaultListableBeanFactory beanFactory);
 
     @Override

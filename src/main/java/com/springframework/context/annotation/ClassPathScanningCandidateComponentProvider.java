@@ -9,6 +9,7 @@ import java.util.Set;
 
 /**
  * 处理对象扫描装配
+ * @author wuxx
  */
 public class ClassPathScanningCandidateComponentProvider {
 

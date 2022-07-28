@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.InputStream;
 /**
  * 通过指定文件路径读取文件信息
+ * @author wuxx
  * */
 public class FileSystemResource implements Resource{
 

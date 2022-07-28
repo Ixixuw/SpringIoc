@@ -7,9 +7,13 @@ import com.springframework.beans.BeansException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
+/**
+ * @author wuxx
+ */
 public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFactory implements BeanDefinitionRegistry, ConfigurableListableBeanFactory {
-    //容器
+    /**
+     * 容器
+     */
     private Map<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<>();
 
     /**

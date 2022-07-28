@@ -9,6 +9,7 @@ import java.net.URL;
 import java.net.URLConnection;
 /**
  * 通过HTTP方式读取云服务的文件
+ * @author wuxx
  * */
 public class UrlResource implements Resource{
 

@@ -1,6 +1,7 @@
 package com.springframework.beans.factory;
 
-import com.springframework.beans.factory.BeanFactory;
-
+/**
+ * @author wuxx
+ */
 public interface HierarchicalBeanFactory extends BeanFactory {
 }

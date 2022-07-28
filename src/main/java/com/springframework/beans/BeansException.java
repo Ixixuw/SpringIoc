@@ -2,6 +2,7 @@ package com.springframework.beans;
 
 /**
  * 定义 Bean 异常
+ * @author wuxx
  */
 public class BeansException extends RuntimeException {
 

@@ -13,6 +13,7 @@ import java.util.Properties;
 
 /**
  * 处理占位符配置
+ * @author wuxx
  */
 public class PropertyPlaceholderConfigurer implements BeanFactoryPostProcessor {
 

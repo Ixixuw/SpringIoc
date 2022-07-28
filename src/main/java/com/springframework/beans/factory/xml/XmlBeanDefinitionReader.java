@@ -19,8 +19,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-import static cn.hutool.core.lang.ClassScanner.scanPackage;
-
+/**
+ * @author wuxx
+ */
 public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
     public XmlBeanDefinitionReader(BeanDefinitionRegistry registry) {
         super(registry);

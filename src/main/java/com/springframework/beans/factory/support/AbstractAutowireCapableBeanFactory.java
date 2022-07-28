@@ -14,7 +14,9 @@ import cn.hutool.core.bean.BeanUtil;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
-
+/**
+ * @author wuxx
+ */
 public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFactory implements AutowireCapableBeanFactory {
 
     private InstantiationStrategy instantiationStrategy = new CglibSubclassingInstantiationStrategy();

@@ -7,6 +7,7 @@ import java.net.URL;
 
 /**
  * 在获取资源时判断其是什么文件
+ * @author wuxx
  * */
 public class DefaultResourceLoader implements ResourceLoader{
 

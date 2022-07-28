@@ -9,8 +9,11 @@ import java.lang.reflect.Method;
 
 /**
  * 销毁方法适配器,希望有个统一接口进行销毁
+ * @author wuxx
  * */
 public class DisposableBeanAdapter implements DisposableBean {
+
+    private static final String DESTROY = "destroy";
 
     private final Object bean;
 
@@ -31,7 +34,8 @@ public class DisposableBeanAdapter implements DisposableBean {
             ((DisposableBean) bean).destroy();
         }
         //2.配置信息 destroy-method {判断是为了避免二次销毁}
-        if (StrUtil.isNotEmpty(destroyMethodName) && !(bean instanceof DisposableBean && "destroy".equals(this.destroyMethodName))) {
+        boolean flag = StrUtil.isNotEmpty(destroyMethodName) && !(bean instanceof DisposableBean && DESTROY.equals(this.destroyMethodName));
+        if (flag) {
             Method destroyMethod = bean.getClass().getMethod(destroyMethodName);
             if (null == destroyMethod) {
                 throw new BeansException("Couldn't find a destroy method named " + destroyMethodName + " on bean with name " + beanName + " ");

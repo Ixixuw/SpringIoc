@@ -1,6 +1,7 @@
 package com.springframework.beans;
 /**
  * 传递类属性信息
+ * @author wuxx
  * */
 public class PropertyValue {
 

@@ -7,6 +7,7 @@ import static com.springframework.beans.factory.config.ConfigurableBeanFactory.S
 
 /**
  * 用来存放bean对象
+ * @author wuxx
  * */
 public class BeanDefinition {
     private Class beanClass;

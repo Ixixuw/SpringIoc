@@ -1,7 +1,9 @@
 package com.springframework.context.annotation;
 
 import java.lang.annotation.*;
-
+/**
+ * @author wuxx
+ */
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented

@@ -1,11 +1,10 @@
 package com.springframework.beans;
 
-import com.springframework.beans.PropertyValue;
-
 import java.util.ArrayList;
 import java.util.List;
 /**
  * 传递类属性信息，类属性过多采用集合
+ * @author wuxx
  * */
 public class PropertyValues {
 

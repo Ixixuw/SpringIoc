@@ -3,6 +3,7 @@ package com.springframework.context.support;
 import com.springframework.beans.BeansException;
 /**
  * 应用上下文实现类
+ * @author wuxx
  * */
 public class ClassPathXmlApplicationContext extends AbstractXmlApplicationContext{
 

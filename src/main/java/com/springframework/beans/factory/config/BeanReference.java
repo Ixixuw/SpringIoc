@@ -1,6 +1,7 @@
 package com.springframework.beans.factory.config;
 /**
  * bean的引用
+ * @author wuxx
  * */
 public class BeanReference {
     private final String beanName;

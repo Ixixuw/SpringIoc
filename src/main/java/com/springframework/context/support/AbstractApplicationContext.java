@@ -9,6 +9,9 @@ import com.springframework.core.io.DefaultResourceLoader;
 
 import java.util.Map;
 
+/**
+ * @author wuxx
+ */
 public abstract class AbstractApplicationContext extends DefaultResourceLoader implements ConfigurableApplicationContext {
     @Override
     public void refresh() throws BeansException {

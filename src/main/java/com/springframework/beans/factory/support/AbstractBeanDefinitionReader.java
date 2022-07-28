@@ -2,7 +2,9 @@ package com.springframework.beans.factory.support;
 
 import com.springframework.core.io.DefaultResourceLoader;
 import com.springframework.core.io.ResourceLoader;
-
+/**
+ * @author wuxx
+ */
 public abstract class AbstractBeanDefinitionReader implements BeanDefinitionReader{
 
     private final BeanDefinitionRegistry registry;
@@ -13,7 +15,7 @@ public abstract class AbstractBeanDefinitionReader implements BeanDefinitionRead
         this(registry, new DefaultResourceLoader());
     }
 
-    public AbstractBeanDefinitionReader(BeanDefinitionRegistry registry, ResourceLoader resourceLoader) {
+    protected AbstractBeanDefinitionReader(BeanDefinitionRegistry registry, ResourceLoader resourceLoader) {
         this.registry = registry;
         this.resourceLoader = resourceLoader;
     }

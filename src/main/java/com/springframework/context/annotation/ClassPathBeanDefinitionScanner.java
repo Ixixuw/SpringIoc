@@ -6,7 +6,9 @@ import com.springframework.beans.factory.support.BeanDefinitionRegistry;
 import com.springframework.stereotype.Component;
 
 import java.util.Set;
-
+/**
+ * @author wuxx
+ */
 public class ClassPathBeanDefinitionScanner extends ClassPathScanningCandidateComponentProvider{
 
     private BeanDefinitionRegistry registry;
