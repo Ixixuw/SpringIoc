@@ -7,9 +7,14 @@ import static com.springframework.beans.factory.config.ConfigurableBeanFactory.S
 
 /**
  * 用来存放bean对象
+ *
  * @author wuxx
- * */
+ */
 public class BeanDefinition {
+
+    String SCOPE_SINGLETON = ConfigurableBeanFactory.SCOPE_SINGLETON;
+
+    String SCOPE_PROTOTYPE = ConfigurableBeanFactory.SCOPE_PROTOTYPE;
     private Class beanClass;
 
     private PropertyValues propertyValues;
@@ -30,11 +35,12 @@ public class BeanDefinition {
         this.prototype = SCOPE_PROTOTYPE.equals(scope);
     }
 
-    public BeanDefinition(Class beanClass){
+    public BeanDefinition(Class beanClass) {
         this.beanClass = beanClass;
         this.propertyValues = new PropertyValues();
     }
-    public BeanDefinition(Class beanClass, PropertyValues propertyValues){
+
+    public BeanDefinition(Class beanClass, PropertyValues propertyValues) {
         this.beanClass = beanClass;
         this.propertyValues = propertyValues;
     }
@@ -78,4 +84,5 @@ public class BeanDefinition {
     public void setDestroyMethodName(String destroyMethodName) {
         this.destroyMethodName = destroyMethodName;
     }
+
 }
