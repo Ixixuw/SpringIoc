@@ -14,9 +14,6 @@ public class BeanDefinition {
 
     private PropertyValues propertyValues;
 
-    /**
-     * 与 XML 相对应
-     * */
     private String initMethodName;
 
     private String destroyMethodName;

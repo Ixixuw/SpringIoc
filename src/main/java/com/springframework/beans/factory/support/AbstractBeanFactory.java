@@ -4,6 +4,7 @@ import com.springframework.beans.factory.config.BeanDefinition;
 import com.springframework.beans.BeansException;
 import com.springframework.beans.factory.config.BeanPostProcessor;
 import com.springframework.beans.factory.config.ConfigurableBeanFactory;
+import com.springframework.util.ClassUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +13,10 @@ import java.util.List;
  */
 public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry implements ConfigurableBeanFactory {
 
-    /** BeanPostProcessors to apply in createBean */
+    /** ClassLoader 用于解析 Bean 类名（如有必要） */
+    private ClassLoader beanClassLoader = ClassUtils.getDefaultClassLoader();
+
+    /** BeanPostProcessors 用于创建Bean */
     private final List<BeanPostProcessor> beanPostProcessors = new ArrayList<>();
     /**
      * 对单例bean的获取，若获取不到进行对应的实例化bean操作
@@ -73,5 +77,9 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry i
      */
     public List<BeanPostProcessor> getBeanPostProcessors() {
         return this.beanPostProcessors;
+    }
+
+    public ClassLoader getBeanClassLoader() {
+        return this.beanClassLoader;
     }
 }
